@@ -20,8 +20,8 @@ class Student {
         generator = "student_sequence"
     )
     private var id: Long = 0;
-    private var name = "";
-    private var email = "";
+    private var name : String? = "";
+    private var email : String? = "";
     private var dob = LocalDate.of(1900, Month.APRIL, 12)
     @Transient
     private var age = 0;
@@ -55,19 +55,19 @@ class Student {
         this.id = id;
     }
 
-    public fun getName(): String{
+    public fun getName(): String?{
         return name;
     }
 
-    public fun setName( name : String){
+    public fun setName( name : String?){
         this.name = name;
     }
 
-    public fun getEmail(): String{
+    public fun getEmail(): String?{
         return email;
     }
 
-    public fun setEmail( email: String){
+    public fun setEmail( email: String?){
         this.email = email;
     }
 
